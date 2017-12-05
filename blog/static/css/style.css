@@ -1,0 +1,121 @@
+body {
+	margin: 0;
+	padding: 0;
+}
+.header {
+	width: 100%;
+	height: 250px;
+
+	background-color: #0a0514;
+
+	display: flex;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+.logo_wrapper {
+	margin-top: 20px;
+	margin-left: 120px;
+	width: 40%;
+	max-width: 640px;
+	max-height: 215px;
+
+	display: flex;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+
+    flex-flow: nowrap;
+    justify-content: space-around;
+}
+#hexagonlogo {
+	-webkit-transition: all 0.6s ease;;
+    -moz-transition: all 0.6s ease;;
+    -o-transition: all 0.6s ease;;
+    transition: all 0.6s ease;
+}
+#hexagonlogo:hover {
+	-webkit-transform: rotateZ(360deg);
+    -ms-transform: rotateZ(180deg);
+    transform: rotateZ(180deg);
+}
+.logo_wrapper h1 {
+	margin-top: 80px;
+	font-family: Cyr;
+	font-size: 50pt;
+	text-shadow: #fff 0 0 15px;
+}
+.contacts {
+	width: 25%;
+	margin-top: 20px;
+	margin-right: 20px;
+	color: #fff;
+}
+.contacts span {
+	font-family: Product Sans;
+	font-size: 1.3em;
+}
+.contacts img {
+	max-width: 36px;
+	max-height: 36px;
+	border-radius: 7px;
+	margin-right: 10px;
+}
+.contact_wrapper {
+	margin-bottom: 20px;
+	display: flex;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+
+    flex-flow: nowrap;
+    justify-content: flex-start;
+}
+.lorem {
+	font-size: 25pt;
+}
+.nav-container { 
+	background: url('navbg.png') repeat-x 0 0;
+	max-height: 50px;
+}
+.f-nav { 
+	z-index: 9999; position: fixed; left: 0; top: 0; width: 100%;
+}
+
+.nav { 
+	height: 50px;
+	padding-right: 10%;
+
+	display: flex;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+
+    flex-flow: nowrap;
+    justify-content: flex-end;
+}
+.nav ul { 
+	list-style: none; 
+	margin: 0;
+	padding: 0;
+}
+.nav ul li{
+	float: left;
+	margin: 15px 30px;
+}
+.nav ul li a { 
+	text-decoration: none;
+	font-family: GothamPro;
+	font-size: 1.3em;
+	color: #fff;
+	-webkit-transition: all 0.5s ease;;
+    -moz-transition: all 0.5s ease;;
+    -o-transition: all 0.5s ease;;
+    transition: all 0.5s ease;
+}
+.nav ul li a:hover {
+	border-bottom: solid #fff 3px;
+}
