@@ -1,22 +1,111 @@
-<html>
-    <head>
-        <title>Django Girls blog</title>
-    </head>
-    <body>
-        <div>
-            <h1><a href="/">Django Girls Blog</a></h1>
-        </div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="..\..\static\css\style.css">
+	<link rel="stylesheet" href="..\..\static\css\stylefonts.css">
+	<script type="text/javascript" src="..\..\static\jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="..\..\static\responsiveCarousel.min.js"></script>
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+	<script type="text/javascript">
+		var _rys = jQuery.noConflict();
+		_rys("document").ready(function(){
+		
+			_rys(window).scroll(function () {
+				if (_rys(this).scrollTop() > 220) {
+					_rys('.nav-container').addClass("f-nav");
+				} else {
+					_rys('.nav-container').removeClass("f-nav");
+				}
+			});
 
-        <div>
-            <p>published: 14.06.2014, 12:14</p>
-            <h2><a href="">My first post</a></h2>
-            <p>Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-        </div>
-
-        <div>
-            <p>published: 14.06.2014, 12:14</p>
-            <h2><a href="">My second post</a></h2>
-            <p>Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut f.</p>
-        </div>
-    </body>
+		});
+	</script>
+</head>
+<body>
+	<div class="header">
+		<div class="logo_wrapper">
+			<h1>profycar</h1>
+			<img id="hexagonlogo" src="..\..\static\css\hexagonlogo.png" alt="">
+		</div>
+		<div class="contacts">
+			<div class="contact_wrapper">
+				<img src="..\..\static\css\mail.png" alt=""><span><b>E-mail:</b> profycar889@gmail.com</span>
+			</div>
+			<div class="contact_wrapper">
+				<img src="..\..\static\css\phone.png" alt=""><span><b>Phone:</b> +38(050)658-76-02</span>
+			</div>
+		</div>
+	</div>
+	<div class="nav-container">
+		<div class="nav">
+			<ul>
+				<li><a href="">Главная</a></li>
+				<li><a href="">Оставить заявку</a></li>
+				<li><a href="">Как добраться</a></li>
+			</ul>
+			<div class="clear"></div>
+		</div>
+	</div>
+	<div class="content_wrapper">
+		<div class="mi_wrapper">
+			<div class="main_info">
+				<div id="w">
+			    	<nav class="slidernav">
+			      		<div id="navbtns" class="clearfix">
+			       			<a href="#" class="previous"><img src="../../static/css/prev.png" alt=""></a>
+			       			<a href="#" class="next"><img src="../../static/css/next.png" alt=""></a>
+			      		</div>
+			    	</nav>
+			    	<div class="crsl-items" data-navigation="navbtns">
+			      		<div class="crsl-wrap">
+			       			<div class="crsl-item">
+			         			<div class="crsl-item_wrapper">
+			         				<h1>Диагностика автомобилей</h1>
+			         			</div>
+			       			</div><!-- post #1 -->
+			        
+			       			<div class="crsl-item">
+			         			<div class="crsl-item_wrapper">
+			         				<h1>Ремонт автоэлектрооборудования</h1>
+			         			</div>
+					     	</div><!-- post #2 -->
+			        
+			       			<div class="crsl-item">
+			         			<div class="crsl-item_wrapper">
+			         				<h1>Чистка впрьIска</h1>
+			         			</div>
+							</div><!-- post #3 -->
+			      		</div><!-- @end .crsl-wrap -->
+			    	</div><!-- @end .crsl-items -->
+			  	</div><!-- @end #w -->
+			  	<script type="text/javascript">
+				$(function(){
+	  				$('.crsl-items').carousel({
+	    				visible: 1,
+		   				itemMinWidth: 180,
+	    				itemEqualHeight: 370,
+	    				itemMargin: 9,
+	  				});
+		  
+					$("a[href=#]").on('click', function(e) {
+			   			e.preventDefault();
+			  		});
+				});
+				</script>
+			</div>
+		</div>
+		{% for post in posts %}
+    	<div>
+        	<p>published: {{ post.published_date }}</p>
+        	<h1><a href="">{{ post.title }}</a></h1>
+        	<p>{{ post.text|linebreaksbr }}</p>
+    	</div>
+		{% endfor %}
+		<div class="lorem">
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum laboriosam commodi illum nemo odio beatae aliquam placeat non ratione molestiae, deserunt, possimus, atque dolore. Eaque, perferendis vero dolore dolores neque, dolorum quisquam, nesciunt ad totam tempora labore deleniti sed voluptates excepturi ipsum ab tempore voluptate. Inventore id alias, molestias consequuntur dolor expedita aut repellat nulla accusantium tempora aliquid mollitia. Voluptatum animi, at tenetur, harum porro veritatis consequuntur commodi laboriosam hic nihil a, explicabo. Voluptatum nesciunt eos dolorum, at explicabo quos similique consequuntur alias aliquid. Architecto ea iusto amet distinctio quia harum accusamus sequi doloribus quaerat enim vel consectetur dignissimos nobis minus laudantium ipsam, ut necessitatibus molestiae quo, eius eaque numquam, ipsa sint. Illum repellendus, culpa excepturi ab facere magnam sunt eligendi voluptates fugiat, ipsum ipsam asperiores consectetur maiores quibusdam incidunt dolorem quas fuga vero perspiciatis, ducimus aperiam esse impedit voluptatem itaque quae. Aliquam quo expedita quibusdam at, fuga nihil asperiores.
+		</div>
+	</div>
+</body>
 </html>

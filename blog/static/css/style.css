@@ -119,3 +119,58 @@ body {
 .nav ul li a:hover {
 	border-bottom: solid #fff 3px;
 }
+.content_wrapper {
+	background-image: url('qa.jpg');
+	background-attachment: fixed;
+}
+.main_info {
+	margin: 0 auto;
+	width: 70%;
+	height: 350px;
+	max-height: 350px;
+
+	background-image: url('bg1list.jpg');
+	background-repeat: repeat-y;
+
+	box-shadow: inset 0px 0px 20px rgba(3,0,0,1.0);
+}
+#navbtns {
+	padding-top: 10px;
+	width: 135px;
+	margin: 0 auto;
+}
+.clearfix {
+	color: #fff;
+	text-decoration: none;
+	font-family: Product Sans;
+	font-size: 1.6em;
+}
+.previous {
+	margin-right: 10%;
+
+	opacity: 0.7;
+}
+.next {
+	opacity: 0.7;
+}
+.previous:hover {
+	opacity: 1.0;
+}
+.next:hover {
+	opacity: 1.0;
+}
+.crsl-item_wrapper {
+	display: flex;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+
+    flex-flow: row wrap;
+    justify-content: space-around;
+}
+.crsl-item_wrapper h1 {
+	color:  #0a0514;
+	font-size: 2.7em;
+	font-family: Alien;
+	text-shadow: #fff 0 0 15px;
+}
