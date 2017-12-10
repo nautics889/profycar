@@ -18,7 +18,7 @@ body {
 }
 .logo_wrapper {
 	margin-top: 20px;
-	margin-left: 120px;
+	margin-left: 135px;
 	width: 40%;
 	max-width: 640px;
 	max-height: 215px;
@@ -45,18 +45,18 @@ body {
 .logo_wrapper h1 {
 	margin-top: 80px;
 	font-family: Cyr;
-	font-size: 50pt;
+	font-size: 3.7em;
 	text-shadow: #fff 0 0 15px;
 }
 .contacts {
-	width: 25%;
+	width: 32%;
 	margin-top: 20px;
 	margin-right: 20px;
 	color: #fff;
 }
 .contacts span {
 	font-family: Product Sans;
-	font-size: 1.3em;
+	font-size: 1.2em;
 }
 .contacts img {
 	max-width: 36px;
@@ -170,7 +170,11 @@ body {
 }
 .crsl-item_wrapper h1 {
 	color:  #0a0514;
-	font-size: 2.7em;
+	text-align: center;
+	font-size: 2.5em;
 	font-family: Alien;
 	text-shadow: #fff 0 0 15px;
+}
+.blog {
+	background-color:  #0a0514;
 }
