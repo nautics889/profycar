@@ -96,18 +96,18 @@
 				</script>
 			</div>
 		</div>
-		<div class="blog">
-			{% for post in posts %}
-			    <div class="post">
-			        <p>published: {{ post.published_date }}</p>
-			        <h1><a href="">{{ post.title }}</a></h1>
-			        <p>{{ post.text|linebreaksbr }}</p>
-			    </div>
-			{% endfor %}
-		</div>
-		<div class="lorem">
-			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum laboriosam commodi illum nemo odio beatae aliquam placeat non ratione molestiae, deserunt, possimus, atque dolore. Eaque, perferendis vero dolore dolores neque, dolorum quisquam, nesciunt ad totam tempora labore deleniti sed voluptates excepturi ipsum ab tempore voluptate. Inventore id alias, molestias consequuntur dolor expedita aut repellat nulla accusantium tempora aliquid mollitia. Voluptatum animi, at tenetur, harum porro veritatis consequuntur commodi laboriosam hic nihil a, explicabo. Voluptatum nesciunt eos dolorum, at explicabo quos similique consequuntur alias aliquid. Architecto ea iusto amet distinctio quia harum accusamus sequi doloribus quaerat enim vel consectetur dignissimos nobis minus laudantium ipsam, ut necessitatibus molestiae quo, eius eaque numquam, ipsa sint. Illum repellendus, culpa excepturi ab facere magnam sunt eligendi voluptates fugiat, ipsum ipsam asperiores consectetur maiores quibusdam incidunt dolorem quas fuga vero perspiciatis, ducimus aperiam esse impedit voluptatem itaque quae. Aliquam quo expedita quibusdam at, fuga nihil asperiores.
-		</div>
+	</div>
+	<div class="blog">
+		{% for post in posts %}
+		    <div class="post">
+		        <p>published: {{ post.published_date }}</p>
+		        <h1 class="post_title"><a href="">{{ post.title }}</a></h1>
+		        {% if post.picrel %}
+        		<img src="{{ MEDIA_URL }}{{ post.picrel.url }}" alt="nope">
+        		{% endif %}
+		        <p>{{ post.text|linebreaksbr }}</p>
+		    </div>
+		{% endfor %}
 	</div>
 </body>
 </html>

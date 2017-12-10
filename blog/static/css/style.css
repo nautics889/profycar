@@ -176,5 +176,15 @@ body {
 	text-shadow: #fff 0 0 15px;
 }
 .blog {
+	margin-top: -20px;
 	background-color:  #0a0514;
+}
+.post {
+	width: 80%;
+	margin: 0 auto;
+	color: #fff;
+}
+.post_title a {
+	text-decoration: none;
+	color: #fff;
 }
