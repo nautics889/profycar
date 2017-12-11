@@ -98,16 +98,29 @@
 		</div>
 	</div>
 	<div class="blog">
-		{% for post in posts %}
-		    <div class="post">
-		        <p>published: {{ post.published_date }}</p>
-		        <h1 class="post_title"><a href="">{{ post.title }}</a></h1>
-		        {% if post.picrel %}
-        		<img src="{{ MEDIA_URL }}{{ post.picrel.url }}" alt="nope">
-        		{% endif %}
-		        <p>{{ post.text|linebreaksbr }}</p>
-		    </div>
-		{% endfor %}
+		<div class="post_wrapper">
+			{% for post in posts %}
+			    <div class="post">
+			        <p class="published_date">{{ post.published_date }}</p>
+			        <h1 class="post_title"><a href="">{{ post.title }}</a></h1>
+			        {% if post.picrel %}
+			        		<img src="{{ MEDIA_URL }}{{ post.picrel.url }}" alt="nope">
+			        		{% endif %}
+			        <p>{{ post.text|linebreaksbr }}</p>
+			    </div>
+			{% endfor %}
+		</div>
+	</div>
+	<div class="footer">
+		<div class="soc_media_wrapper">
+			<div class="soc_media">
+				<a href=""><img src="..\..\static\css\telegram.png" alt=""></a>
+				<a href=""><img src="..\..\static\css\viber.png" alt=""></a>
+			</div>
+		</div>
+		<div class="down_footer">
+			<span>© ЧП «Profycar», 2017</span>
+		</div>
 	</div>
 </body>
 </html>
