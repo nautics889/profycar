@@ -198,7 +198,6 @@ body {
 }
 .element_wrapper {
 	background-color:  #161023;
-	box-shadow: 0px -2px 20px rgba(3,0,0,1.0);
 }
 .post_wrapper{
 	width: 80%;
@@ -292,6 +291,27 @@ body {
 }
 #location_map {
 	margin: 50px 0;
+	border: ridge 4px #7c778d;
+	border-radius: 3px;
+}
+.feedback_wrapper {
+	width: 80%;
+	margin: 0 auto;
+	box-shadow: 0px 0px 36px rgba(10,5,20,1.0);
+	background-color:  #0a0514;
+
+	display: flex;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+
+    flex-flow: nowrap;
+    justify-content: space-around;
+}
+#feedback {
+	margin: 50px 0;
+	width: 760px;
+	height: 950px;
 	border: ridge 4px #7c778d;
 	border-radius: 3px;
 }

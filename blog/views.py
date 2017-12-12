@@ -15,3 +15,6 @@ def post_detail(request, pk):
 
 def location(request):
     return render(request, 'blog/location.html')
+
+def feedback(request):
+	return render(request, 'blog/feedback.html')
