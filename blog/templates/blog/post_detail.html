@@ -1,0 +1,16 @@
+{% extends 'blog/base.html' %}
+
+{% block content %}
+    <div class="element_wrapper">
+    	<div class="post_wrapper">
+    		<div class="post">
+    		    <p class="published_date">{{ post.published_date }}</p>
+    			 	<h1 class="post_title"><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h1>
+    				{% if post.picrel %}
+    					<img src="{{ MEDIA_URL }}{{ post.picrel.url }}" alt="nope">
+    				{% endif %}
+    				<p>{{ post.text|linebreaksbr }}</p>
+    		</div>
+    	</div>
+    </div>
+{% endblock %}
